@@ -21,4 +21,8 @@ private func sandboxRoutes(_ router: Router) {
 	let sandboxController = SandboxController()
 	router.get("hello", use: sandboxController.greet)
 	router.get("helloName", use: sandboxController.delayedGreet)
+	
+	router.get { req in
+		"Sandbox routes"
+	}
 }
